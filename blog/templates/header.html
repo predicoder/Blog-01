@@ -1,0 +1,26 @@
+  <header class="navbar fixed top-0 p-3 left-0 w-full bg-white shadow z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-10">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl font-bold text-blue-800">Logo</a>
+                </div>
+                <div class="flex space-x-4 items-center">
+                    <a href="{% url 'home' %}" class="text-black font-bold hover:text-blue-800">Home</a>
+                    <a href="#" class="text-black font-bold hover:text-blue-800">About</a>
+                    <a href="{% url 'contact' %}" class="text-black font-bold hover:text-blue-800">Portfolio</a>
+
+                    <div class="relative group">
+                        <button class="text-black font-bold hover:text-blue-800 focus:outline-none">
+                            <span>Services</span>
+                        </button>
+                        <div
+                            class="absolute right-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Option 3</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

@@ -1,0 +1,41 @@
+{% load blog_tags %} {% load hitcount_tags %}
+
+     <main class="container mx-auto my-8 p-4 mt-20">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article Card 1 -->
+          {% for articles in object_list %}
+
+          <article class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src="{{ articles.image.url }}"
+              alt="Article Image"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h2 class="text-xl font-bold mb-2">{{ articles.title }}</h2>
+              <div class="decoration-gray-500">
+                <ul>
+                    <li class="decoration-gray-500"><i class="icon-calendar3"></i> {{ articles.published }}</li>
+                    
+                    
+                </ul>
+                    <hr>    
+            </div>
+              <p class="text-gray-700">
+                {{ articles.content | safe | truncatewords:20}} 
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:underline mt-4 inline-block"
+                >Read More</a
+              >
+            </div>
+          </article>
+          {% endfor %}
+
+
+        
+        </div>
+
+    </main> 

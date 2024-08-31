@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<section id="content">
+    <div class="content-wrap">
+        <div class="container clearfix">
+
+            <div class="single-post mb-0">
+                {% for page in object_list %}
+
+                <!-- Single Post
+                ============================================= -->
+                <div class="entry clearfix">
+                    <div class="entry-title">
+                        <!-- <h2>{{ page.title  }}</h2> -->
+                    </div>
+
+                    <div class="entry-content">
+                        <p>
+                                  {{ page.content | safe }}
+                        </p>
+                    </div>
+
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  {% endblock content %}
